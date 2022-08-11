@@ -12,6 +12,7 @@ import { People } from "../../models/people";
 })
 export class CharactersComponent implements OnInit {
   peopleList: any[] = []; // Creo array vacio para los personajes
+  mapArray: Map < String, Object > [] = [];
 
   constructor(private peopleService: PeopleService, private _activeRouter: ActivatedRoute ){
     console.log('Creado')

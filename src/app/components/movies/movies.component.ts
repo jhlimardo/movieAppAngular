@@ -11,6 +11,15 @@ import { Movie } from "../../models/movies";
 export class MoviesComponent implements OnInit {
 
   movieList: any[] = []; // Creo array vacio para las movies
+  selectedMovie?: Movie
+  onSelect(movie: Movie) : void {
+    this.selectedMovie = movie
+    console.log(movie)
+    alert(movie.opening_crawl)
+  }
+
+
+
 
   constructor(private movieService: MoviesService ){
     console.log('Creado')
@@ -21,5 +30,6 @@ export class MoviesComponent implements OnInit {
     this.movieService.getMovies() // Llamamos a la funcion para obtener la Api
       .subscribe((response: any) => this.movieList = response.results, console.log(this.movieList))
     console.log("Movies", this.movieList)// pongo las movies en el array
+
   }
 }
