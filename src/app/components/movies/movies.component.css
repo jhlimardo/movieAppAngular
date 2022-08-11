@@ -2,6 +2,12 @@ li {
 
   list-style:none
 }
+
+a:link, a:visited,  a:hover, a:active
+{
+  color: #f5f4ee;
+  text-decoration: none;
+}
 button {
   padding: 10px;
   margin-left: 20px;
@@ -20,37 +26,29 @@ button {
 
 }
 
-.card-content {
+.card-container {
 
-  /*display: grid;*/
-  /*grid-template-columns: repeat(1, 1fr);*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  width: 90%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
-  /* margin-bottom: 40px; */
   margin-top: 20px;
   border-radius: 4px;
   padding: 10px;
-  /* background: grey */
-  /* text-align: center; */
-
-
-
 }
 
 .card-block {
   background-color: #f5f4ee;
   height: 90%;
   max-height: 200px;
-  width: 40%;
+  width: 90%;
   border-radius: 10px;
   padding: 15px;
   background-color: #f5f4ee;
   box-shadow: 10px 10px 4px #111;
   border: 3px solid #545455;
-  /* background: radial-gradient(black 33%, transparent 33%);
-    background-size: 3px 3px; */
   margin-bottom: 20px !important;
   transition: .5s;
   text-align: center;

@@ -1,32 +1,26 @@
 <div class="home-container">
-  <div class="card-content">
+
 
       <ul>
+        <div class="card-container">
         <div class="card-block" *ngFor="let movie of movieList">
 
           <li>
             <div class="card-title"> Titulo: {{movie.title}}</div>
-
-          </li>
-          <li>
             <div class="card-text"> Fecha de Lanzamiento: {{movie.release_date}}</div>
-          </li>
-          <li>
             <div class="card-text"> Director: {{movie.director}}</div>
-          </li>
-          <li>
             <div class="card-text"> Productor: {{movie.producer}}</div>
           </li>
           <button type="button" (click)="onSelect(movie)"> View Details</button>
-          <button type="button" (click)="onSelect(movie)"> View Characters</button>
+          <button type="button" ><a  [routerLink]="['/people']">View Characters</a> </button>
 
 
         </div>
 
-
+        </div>
       </ul>
 
 
-  </div>
+
 
 </div>
